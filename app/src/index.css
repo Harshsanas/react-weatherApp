@@ -1,0 +1,101 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.app {
+  background-image: url("https://www.popsci.com/app/uploads/2020/06/05/3NIEQB3SFVCMNHH6MHZ42FO6PA.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+}
+
+.app.warm {
+  background-image: url("https://cdn.pixabay.com/photo/2018/09/19/23/03/sunset-3689760__340.jpg");
+}
+
+nav {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
+}
+.searchbox {
+  width: 50%;
+  margin: auto;
+}
+
+.searchbox .searchbar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0px 0px 16px 16px;
+
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+  color: #313131;
+  font-size: 24px;
+  transition: 0.4s ease;
+}
+
+.searchbox .searchbar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.locationbox .location {
+  color: white;
+  font-size: 35px;
+  font-weight: 600px;
+  margin-top: 100px;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.locationbox .date {
+  color: whitesmoke;
+  font-size: 22px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.weatherbox {
+  text-align: center;
+}
+
+.weatherbox .temp {
+  position: relative;
+  display: inline-block;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+
+  padding: 15px 25px;
+
+  color: whitesmoke;
+  font-size: 100px;
+  font-weight: 800;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weatherbox .weather {
+  color: white;
+  font-size: 45px;
+  font-weight: 800px;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
