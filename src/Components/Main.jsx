@@ -1,9 +1,5 @@
 import axios from "axios";
 import React, { useState } from "react";
-const api_keys = {
-  key: "47516d439dc34bae327a6920ae8ff2aa",
-  base_url: "https //api.openweathermap.org/data/2.5/",
-};
 
 function Main() {
   const [weather, setWeather] = useState({});
@@ -14,18 +10,17 @@ function Main() {
       alert("working");
       axios
         .get(
-          `${api_keys.base_url}weather?q=${data}&units=metric&APPID=${api_keys.key}`
+          `api.openweathermap.org/data/2.5/weather?q=${data}&appid=47516d439dc34bae327a6920ae8ff2aa`
         )
         .then((result) => {
-          setData("");
-          setWeather(result);
           console.log(result);
+          setWeather(result.data);
         })
         .catch((error) => {
           console.log(error);
         });
 
-      console.log(api_keys.base_url);
+      console.log(data);
     }
   };
   const dateBuilder = (e) => {
