@@ -6,11 +6,13 @@ const FOOTER = styled.div`
   bottom: 0;
   position: fixed;
   width: 100%;
-  color: whitesmoke;
+  color: blanchedalmond;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.2);
   text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 `;
+
+const token = "47516d439dc34bae327a6920ae8ff2aa";
 
 function Main() {
   const [weather, setWeather] = useState([]);
@@ -20,7 +22,8 @@ function Main() {
     if (el.key === "Enter") {
       alert("working");
 
-      const url = `api.openweathermap.org/data/2.5/weather?q=${input}&appid=47516d439dc34bae327a6920ae8ff2aa`;
+      const url = `api.openweathermap.org/data/2.5/weather?q=${input}&appid=${token}`;
+      console.log(token,input)
 
       const res = await axios
         .get(url, {
@@ -29,8 +32,8 @@ function Main() {
           },
         })
         .catch(console.error);
-      setWeather(input);
-      console.log(res);
+      setWeather(weather);
+      console.log(res)
     }
   };
 
@@ -99,7 +102,7 @@ function Main() {
         )}
 
         <FOOTER>
-          <h2>REACT WEATHER APP - BY HARI</h2>
+          <h2>REACT WEATHER APP - BY HARSHIT</h2>
         </FOOTER>
       </nav>
     </div>
