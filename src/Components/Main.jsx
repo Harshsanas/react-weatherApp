@@ -90,7 +90,7 @@ export default function Main() {
             </div>
 
             <div className="weatherbox">
-              <div className="temp">{Math.round(weather.main.temp)}°C</div>
+              <div className="temp">{Math.round(weather.main.temp)-273}°C</div>
               <div className="weather">{weather.weather[0].main}</div>
             </div>
           </div>
