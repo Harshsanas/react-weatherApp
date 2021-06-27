@@ -19,4 +19,7 @@ npm i semanticUI
 
 
 
-Netlify Deployment website : https://harshtit-weatherapp.netlify.app
+# Netlify Deployment website : 
+```
+https://harshtit-weatherapp.netlify.app
+```
