@@ -14,28 +14,24 @@ const FOOTER = styled.div`
 
 const token = "47516d439dc34bae327a6920ae8ff2aa";
 
-function Main() {
+export default function Main() {
   const [weather, setWeather] = useState([]);
   const [input, setInput] = useState("");
 
-  const search = async (el) => {
+  const search = (el) => {
     if (el.key === "Enter") {
-      alert("working");
+      console.log(token,input);
+      axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${token}`
+      ).then(res=>{
+        setWeather(res.data)
+        console.log(res.data);
+      }).catch(err=> {
+        console.log(err.message);
+      });
+    }}
 
-      const url = `api.openweathermap.org/data/2.5/weather?q=${input}&appid=${token}`;
-      console.log(token,input)
-
-      const res = await axios
-        .get(url, {
-          params: {
-            q: input,
-          },
-        })
-        .catch(console.error);
-      setWeather(weather);
-      console.log(res)
-    }
-  };
+    
 
   const dateBuilder = (e) => {
     let months = [
@@ -80,7 +76,8 @@ function Main() {
             value={input}
             onKeyPress={search}
             className="searchbar"
-            placeholder="Search..."
+            placeholder="Enter City Name"
+            style={{textAlign:"center"}}
           />
         </div>
         {typeof weather.main != "undefined" ? (
@@ -93,7 +90,7 @@ function Main() {
             </div>
 
             <div className="weatherbox">
-              <div className="temp">{Math.round(weather.main.temp)}</div>
+              <div className="temp">{Math.round(weather.main.temp)}°C</div>
               <div className="weather">{weather.weather[0].main}</div>
             </div>
           </div>
@@ -108,5 +105,3 @@ function Main() {
     </div>
   );
 }
-
-export default Main;
