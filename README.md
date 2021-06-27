@@ -1,8 +1,9 @@
 # React_WEATHERAPP
 
 # Getting Started with Create React app:
+```
 npx create-react-app React_WEATHERAPP
-
+```
 # Library used:-
 
 1. Axios
