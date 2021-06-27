@@ -1,4 +1,4 @@
-# React_WEATHERAPP :: https://harshtit-weatherapp.netlify.app
+# React_WEATHERAPP :: https://harshit-weatherapp.netlify.app
 
 # Getting Started with Create React app:
 ```
@@ -21,5 +21,5 @@ npm i semanticUI
 
 # Netlify Deployment website : 
 ```
-https://harshtit-weatherapp.netlify.app
+https://harshit-weatherapp.netlify.app
 ```
